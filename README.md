@@ -19,11 +19,17 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
+#### -Potrait mode Walkthrough
+<img src="https://github.com/patelchirag13/Flixster/blob/master/WalkThrough-Potrait.gif" width=250><br>
+
+#### -Landscape mode Walkthrough
+<img src="https://github.com/patelchirag13/Flixster/blob/master/WalkThrough-Landscape.gif" width=500><br>
+
 #### -Shows a placeholder image if Internet is slow
 <img src="https://github.com/patelchirag13/Flixster/blob/master/WalkThrough-Placeholder.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+Learning to change the UI was kind of confusing at first but it wull take some time to get use to it. 
 
 ### Open-source libraries used
 
