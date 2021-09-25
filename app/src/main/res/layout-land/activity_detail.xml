@@ -30,6 +30,7 @@
                 android:fontFamily="cursive"
                 android:padding="10dp"
                 android:text="The Sucide Squad"
+                android:transitionName="title"
                 android:textColor="@color/textColor"
                 android:textSize="30sp" />
 
@@ -47,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
+                android:transitionName="detail"
                 android:padding="10dp"
                 android:textColor="@color/textColor"
                 tools:text="Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese." />

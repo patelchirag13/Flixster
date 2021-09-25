@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -36,6 +38,8 @@ public class DetailActivity extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        postponeEnterTransition();
 
         tvTitle = findViewById(R.id.tvTitle);
         tvOverview = findViewById(R.id.tvOverView);
@@ -71,6 +75,8 @@ public class DetailActivity extends YouTubeBaseActivity {
 
             }
         });
+
+        scheduleStartPostponedTransition(tvTitle);
     }
 
     private void initializeYoutube(final String youtubeKey) {
@@ -87,5 +93,17 @@ public class DetailActivity extends YouTubeBaseActivity {
                 Log.d("DetailActivity", "onInitializationFailure");
             }
         });
+    }
+
+    private void scheduleStartPostponedTransition(final View sharedElement) {
+        sharedElement.getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener() {
+                    @Override
+                    public boolean onPreDraw() {
+                        sharedElement.getViewTreeObserver().removeOnPreDrawListener(this);
+                        startPostponedEnterTransition();
+                        return true;
+                    }
+                });
     }
 }
